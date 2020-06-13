@@ -1,0 +1,16 @@
+{
+  "name": "three.js-cube",
+  "version": "1.0.0",
+  "description": "Different examples for three.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve -p 5000"
+  },
+  "author": "Mandar Wagh",
+  "license": "GNU General Public License v3.0",
+  "dependencies": {
+    "serve": "^11.0.2",
+    "three": "^0.116.1",
+    "three-js-csg": "^72.0.0"
+  }
+}
