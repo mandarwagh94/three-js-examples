@@ -2,6 +2,24 @@
 
 <head>
     <title>WebGL Example</title>
+    <script>
+        function loadedContent() {
+            console.log('THREE', THREE);
+            var canvas = document.getElementById('game-window');
+            var renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true });
+            var scene = new THREE.Scene();
+            scene.add(new THREE.AxesHelper(50));
+
+            var camera = new THREE.PerspectiveCamera(45, 800 / 600, 0.1, 1000);
+            camera.position.set(50, 50, 50);
+            camera.lookAt(0, 0, 0);
+
+            const light = new THREE.AmbientLight();
+            scene.add(light);
+
+            renderer.setClearColor(0xffffff);
+        }
+    </script>
 </head>
 
 <body>
@@ -9,11 +27,12 @@
     <br />
     <i>WebGL</i>
     <div id="test"></div>    
-    <script src = "node_modules/three/build/three.module.js"></script>
-    <script src = "node_modules/three/examples/jsm/helpers/FaceNormalsHelper.js"></script>
-    <script src = "node_modules/three-js-csg/index.js"></script>
-    <script src="lib/OrbitControls.js"></script>
-    <script src="src/geometry.js"></script>
+    <!-- <script src = "node_modules/three/build/three.module.js"></script> -->
+    <!-- <script src = "node_modules/three/examples/jsm/helpers/FaceNormalsHelper.js"></script> -->
+    <!-- <script src = "node_modules/three-js-csg/index.js"></script> -->
+    <script onload="loadedContent();" src="main.js"></script>
+    <!-- <script src="OrbitControls.js"></script> -->
+    <!-- <script src="geometry.js"></script> -->
 </body>
 
 </html>

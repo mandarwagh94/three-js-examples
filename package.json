@@ -2,9 +2,9 @@
   "name": "three.js-cube",
   "version": "1.0.0",
   "description": "Different examples for three.js",
-  "main": "index.js",
   "scripts": {
-    "start": "serve -p 5000"
+    "start": "serve -p 5000 dist",
+    "build": "webpack --config webpack.config.js"
   },
   "author": "Mandar Wagh",
   "license": "GNU General Public License v3.0",
@@ -12,5 +12,11 @@
     "serve": "^11.0.2",
     "three": "^0.116.1",
     "three-js-csg": "^72.0.0"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^4.3.0",
+    "webpack": "^4.43.0",
+    "webpack-bundle-analyzer": "^3.8.0",
+    "webpack-cli": "^3.3.11"
   }
 }
